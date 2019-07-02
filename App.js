@@ -11,7 +11,7 @@ const AppContainer = createStackNavigator(
         TabIndex: TabIndexes,
     },
     {
-        initialRouteName: 'TabIndex',
+        initialRouteName: 'Login',
         headerMode: 'none',
         // headerLeft: <HeaderBackButton onPress={() => navigation.goBack(null)} />,
 

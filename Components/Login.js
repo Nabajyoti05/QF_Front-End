@@ -1,8 +1,6 @@
 import React from 'react';
 import { TextInput, View, Text, Button, StyleSheet } from 'react-native';
 
-// import TabIndexes from './TabIndexes';
-
 class LoginScreen extends React.Component {
   
     render() {
@@ -22,7 +20,7 @@ class LoginScreen extends React.Component {
         flex: 1,
         justifyContent: 'center', 
         alignItems: 'center', 
-        backgroundColor:'black'
+        backgroundColor:'black',
       }
   })
 
