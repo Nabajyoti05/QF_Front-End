@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStackNavigator, createBottomTabNavigator, createAppContainer, HeaderBackButton } from 'react-navigation';
+import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
 import Icons from 'react-native-vector-icons/Ionicons';
 
 // import HomeIconWithBadge from './Icons/HomeIcomWithBage';
@@ -24,9 +24,9 @@ import SettingsScreen from './SettingSreen';
 
 const TabNavigator = createBottomTabNavigator(
     {
-    Home: HomeScreen,
-    Explore: ExploreScreen,
     Settings: SettingsScreen,
+    Explore: ExploreScreen,
+    Home: HomeScreen,
     Profile: ProfileScreen,
   },
   {

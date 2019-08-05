@@ -2,10 +2,10 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import {createMaterialTopTabNavigator} from 'react-navigation';
 
-import Featured from './Components/Featured';
-import Movies from './Components/Movie';
-import Series from './Components/Series';
-import TvShows from './Components/TvShows';
+import Featured from './TabScreens/Featured';
+import Movies from './TabScreens/Movie';
+import Series from './TabScreens/Series';
+import TvShows from './TabScreens/TvShows';
 
 
 const HomeScreen = createMaterialTopTabNavigator(

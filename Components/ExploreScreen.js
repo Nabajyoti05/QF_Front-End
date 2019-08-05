@@ -1,117 +1,122 @@
 import React from 'react';
-import { Text, View, Image, ScrollView } from 'react-native';
+import { StyleSheet, View, TextInput, Text, ScrollView,Image, TouchableOpacity } from 'react-native';
+import Icons from 'react-native-vector-icons/Ionicons';
 
-class SearchScreen extends React.Component {
-    render() {
-      return (
-        <ScrollView>
-        <View style={{ flex: 1, flexDirection:'column', justifyContent: 'flex-start', alignItems: 'center', backgroundColor:'#f7f7f7' }}>
 
-            <View style={{flexDirection: 'row', justifyContent:'flex-start', alignItems:'center', backgroundColor: '#f7f7f7', width: '100%', height:62}}>
-              <Image source={require('./assests/images/drawable-hdpi/path_5.png')} style={{marginLeft:17}}/>
-              <Text style={{fontFamily: "Muli",fontSize: 20,fontWeight: "bold",fontStyle: "normal",letterSpacing: 0,color: "#553850", marginLeft:26}}>Ignored Offers</Text>
-            </View>
-
-            <View style={{ flex:1, justifyContent: 'flex-start', alignItems:'center', height:'100%'}}>
-                <Image source={require('./assests/images/facial.jpg')} style={{width: 420,height: 200,opacity:0.5, backgroundColor: "#38205d", marginTop:0.2}}/>
-
-            <View style={{width: '100%',height: 646,borderRadius: 5,backgroundColor: "#ffffff"}}>
-
-              <View style={{flexDirection:'row'}}>
-                <Text style={{fontFamily: "Muli",fontSize: 12,fontWeight: "bold",fontStyle: "normal",letterSpacing: 0,color: "#563951", marginLeft:13, marginTop:18}}>Body Massage</Text>
-                <Image source={require('./assests/images/drawable-hdpi/group_2.png')} style={{width: 18,height: 18, marginLeft:13, marginTop:18, marginLeft:'54%'}}/>
-                <Text style={{fontFamily: "Muli",fontSize: 12,fontWeight: "bold",fontStyle: "normal",letterSpacing: 0,color: "#563951", marginLeft:13, marginTop:18}}>4.5</Text>
-              </View>
-
-              <View style={{flexDirection:'row'}}>
-                <Text style={{fontFamily: "Muli",fontSize: 12,fontWeight: "normal",fontStyle: "normal",letterSpacing: 0,color: "#6f747b", marginLeft:13, marginTop:10}}>Lara Spa</Text>
-                <Text style={{fontFamily: "Muli",fontSize: 12,fontWeight: "bold",fontStyle: "normal",letterSpacing: 0,color: "#563951", marginLeft:13, marginTop:10, marginLeft:'63%'}}>1.5 km</Text>
-              </View>
-
-              <View style={{ borderBottomColor: '#F7F7F7', borderBottomWidth: 1, width: 330, marginTop:15, alignSelf:'center'}}/>
-
-              <View>
-                    <Text style={{fontFamily: "Muli", fontSize: 13, fontWeight: "600", fontStyle: "normal", letterSpacing: 0, color: "#553850", marginLeft: 15, marginTop:16}}>Description</Text>
-
-                    <View style={{flexDirection:'row', marginLeft: 15, marginTop:12, alignItems:'center'}}>
-                        <Image source={require('./assests/images/drawable-hdpi/oval.png')} />
-                        <Text style={{fontFamily: "Muli", fontSize: 12, fontWeight: "normal", fontStyle: "normal", letterSpacing: 0, color: "#646970", marginLeft:8}}>Lore ipsum is simple</Text>
-                    </View>
-
-                    <View style={{flexDirection:'row', marginLeft: 15, marginTop:8,alignItems:'center'}}>
-                        <Image source={require('./assests/images/drawable-hdpi/oval.png')} />
-                        <Text style={{fontFamily: "Muli", fontSize: 12, fontWeight: "normal", fontStyle: "normal", letterSpacing: 0, color: "#646970", marginLeft:8}}>Dummy Text of the printing</Text>
-                    </View>
-
-                    <View style={{flexDirection:'row', marginLeft: 15, marginTop:8,alignItems:'center'}}>
-                        <Image source={require('./assests/images/drawable-hdpi/oval.png')} />
-                        <Text style={{fontFamily: "Muli", fontSize: 12, fontWeight: "normal", fontStyle: "normal", letterSpacing: 0, color: "#646970", marginLeft:8}}>Typesetting industry</Text>
-                    </View>
-
-                    <View style={{flexDirection:'row', marginLeft: 15, marginTop:8,alignItems:'center'}}>
-                        <Image source={require('./assests/images/drawable-hdpi/oval.png')} />
-                        <Text style={{fontFamily: "Muli", fontSize: 12, fontWeight: "normal", fontStyle: "normal", letterSpacing: 0, color: "#646970", marginLeft:8}}>Lore ipsum is simple</Text>
-                    </View>
-              </View>
-
-                    <View style={{flexDirection:'row', alignItems:'center', width: 320,height: 53,borderRadius: 4,backgroundColor: "#f6f6f6", alignSelf:'center', marginTop:16}}>
-                        <View>
-                          <Image source={require('./assests/images/drawable-hdpi/group_43.png')} />
-                        </View>
-                        <View>
-                          <Text>20 Jan 2019</Text>
-                        </View>
-                        
-                        <View>
-                          <Image source={require('./assests/images/drawable-hdpi/group_44.png')} />
-                        </View>
-                        <View>
-                          <Text>11AM - 12PM</Text>
-                        </View>
-                    </View>
-
-                    <View style={{flexDirection:'column', justifyContent: "center"}}>
-                          <View style={{flexDirection:'row',justifyContent:'space-between', marginLeft: 15, marginTop:24,alignItems:'center'}}>
-                            <View>
-                              <Text style={{fontFamily: "Muli", fontSize: 12, fontWeight: "normal", fontStyle: "normal", letterSpacing: 0, color: "#646970", marginLeft:8}}>Quantity</Text>
-                            </View>
-                            <View style={{flexDirection:'row', marginRight:17, justifyContent:'center'}}>
-                              <View style={{width: 18,height: 16.2,borderRadius: 2,borderStyle: "solid", borderWidth: 1, borderColor: "#553850", alignItems:'center', justifyContent:'center'}}>
-                                <View style={{width: 10.8,height: 0.4,borderStyle: "solid",borderWidth: 1,borderColor: "#553850"}} />
-                              </View>
-                              <Text style={{fontFamily: "Muli", fontSize: 16, fontWeight: "bold", fontStyle: "normal", letterSpacing: 0, color: "#563951", marginLeft:12, marginRight:12}}>1</Text>
-                              <View style={{width: 18,height: 16.2,borderRadius: 2,borderStyle: "solid", borderWidth: 1, borderColor: "#553850"}}/>
-                            </View>
-                          </View>
-
-                          <View style={{flexDirection:'row', marginLeft: 15, marginTop:11,alignItems:'center'}}>
-                              <Text style={{fontFamily: "Muli", fontSize: 12, fontWeight: "normal", fontStyle: "normal", letterSpacing: 0, color: "#646970", marginLeft:8}}>Offer ID:</Text>
-                          </View>
-
-                          <View style={{flexDirection:'row', marginLeft: 15, marginTop:11,alignItems:'center'}}>
-                              <Text style={{fontFamily: "Muli", fontSize: 12, fontWeight: "normal", fontStyle: "normal", letterSpacing: 0, color: "#646970", marginLeft:8}}>List Price</Text>
-                          </View>
-
-                          <View style={{flexDirection:'row', marginLeft: 15, marginTop:11,alignItems:'center'}}>
-                              <Text style={{fontFamily: "Muli", fontSize: 12, fontWeight: "normal", fontStyle: "normal", letterSpacing: 0, color: "#646970", marginLeft:8}}>Offer Price</Text>
-                          </View>
-
-                          <View style={{flexDirection:'row', marginLeft: 15, marginTop:11,alignItems:'center'}}>
-                              <Text style={{fontFamily: "Muli", fontSize: 12, fontWeight: "normal", fontStyle: "normal", letterSpacing: 0, color: "#646970", marginLeft:8}}>Offer Discount Percentage</Text>
-                          </View>
-
-                          <View style={{flexDirection:'row', marginLeft: 15, marginTop:11,alignItems:'center'}}>
-                              <Text style={{fontFamily: "Muli", fontSize: 12, fontWeight: "normal", fontStyle: "normal", letterSpacing: 0, color: "#646970", marginLeft:8}}>Offer Discount Amount</Text>
-                          </View>
-                    </View>
-              </View>
-
-            </View>
-
-        </View>
-        </ScrollView>
-      );
-    }
+export default class ExploreScreen extends React.Component{
+  state={
+    renderItems: [
+      {uri:'https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500', name: 'Aquaman'},
+      {uri:'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', name: 'Aquaman'},
+      {uri:'https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80', name: 'Aquaman'},
+      {uri:'https://cdn.pixabay.com/photo/2018/05/28/22/11/message-in-a-bottle-3437294__340.jpg', name: 'Aquaman'},
+      {uri:'https://static.toiimg.com/photo/msid-67868104/67868104.jpg?1368689', name: 'Aquaman'}
+    ]
   }
+  render(){
+        let images1 = this.state.renderItems.map((item, i) => {
+        console.log("Item", item.name);
+          return (
+          
+            <View style={{padding:4}} key={i}>
+              <TouchableOpacity>
+                <Image style={{width: 130, height: 150, borderRadius:5}} source={{uri: item.uri}} />
+              </TouchableOpacity>
+            </View>
+          
+          )
+        })
 
-  export default SearchScreen;
+        let images2 = this.state.renderItems.map((item, i) => {
+          console.log("Item", item.name);
+            return (
+            
+              <View style={{padding:4}} key={i}>
+                <TouchableOpacity>
+                  <Image style={{width: 130, height: 150, borderRadius:5}} source={{uri: item.uri}} />
+                </TouchableOpacity>
+              </View>
+            
+            )
+          })
+    return(
+      <ScrollView>
+      <View style={styles.container}>
+        <View style={styles.innerContainer}>
+          <View style={{marginRight:-315, marginTop:6}}><Icons name="md-search" style={{position:'absolute'}} size={40}/></View>
+          <View style={{marginRight:-10, marginTop:12}}><Text style={{position:'absolute', fontSize:18}}>Search</Text></View>
+          <TextInput style={styles.textInput} />
+        </View>
+
+        <View style={{padding:10}}>
+          <Text style={{fontSize:18, fontWeight:'bold'}}>Recent Searches</Text>
+        </View>
+
+
+          <View style={{flex: 1, flexDirection:'row', alignItems: 'flex-start', backgroundColor:''}}>
+            <ScrollView horizontal>
+                  {images1}
+            </ScrollView>
+          </View>
+
+        <View style={{padding:20,flexDirection:'row', justifyContent:'flex-start'}}>
+            <Text style={{padding:5, borderColor:'grey',borderWidth:1, borderRadius:5, width:100, marginRight:10, textAlign:'center'}}>Horror</Text>
+            <Text style={{padding:5, backgroundColor:'grey', borderRadius:15, width:140, marginRight:10}}></Text>
+            <Text style={{padding:5, backgroundColor:'grey', borderRadius:15, width:110, marginRight:10}}></Text>
+        </View>
+        <View style={{padding:20,flexDirection:'row', justifyContent:'flex-start', marginTop:-25}}>
+            <Text style={{padding:5, backgroundColor:'grey', borderRadius:15, width:140, marginRight:10}}></Text>
+            <Text style={{padding:5, backgroundColor:'grey', borderRadius:15, width:100, marginRight:10}}></Text>
+            <Text style={{padding:5, backgroundColor:'grey', borderRadius:15, width:120, marginRight:10}}></Text>
+        </View>
+
+          <View style={{ flex: 1, flexDirection:'row', alignItems: 'flex-start', backgroundColor:''}}>
+            <ScrollView horizontal>
+                {images2}
+            </ScrollView>
+          </View>
+
+          <View style={{ flex: 1, flexDirection:'row', alignItems: 'flex-start', backgroundColor:''}}>
+            <ScrollView horizontal>
+                {images2}
+            </ScrollView>
+          </View>
+
+          <View style={{ flex: 1, flexDirection:'row', alignItems: 'flex-start', backgroundColor:''}}>
+            <ScrollView horizontal>
+                {images2}
+            </ScrollView>
+          </View>
+          
+      </View>
+      </ScrollView>
+    )
+  }
+}
+
+const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    flexDirection:'column',
+  },
+  innerContainer:{
+    flex:1,
+    flexDirection:'row',
+    width:'100%',
+    justifyContent:'flex-end',
+    alignItems:'flex-start',
+    marginTop:20
+  },
+  textInput:{
+    width:'90%',
+    height:50,
+    borderRadius:20,
+    borderWidth:1,
+    // flex: 1,
+    paddingTop: 10,
+    paddingRight: 10,
+    paddingBottom: 10,
+    paddingLeft: 0,
+    marginRight:20
+  }
+})
