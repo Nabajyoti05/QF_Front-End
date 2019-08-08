@@ -32,7 +32,7 @@ class Featured extends React.Component {
           return (
           
             <View style={{padding:10}} key={i}>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => this.props.navigation.navigate('profile')}>
                 <Image style={{width: 180, height: 100, borderRadius:5}} source={{uri: item.uri}} />
               </TouchableOpacity>
               {/* <Text style={{color:'white'}}>{item.name}</Text> */}
@@ -46,7 +46,7 @@ class Featured extends React.Component {
             return (
             
               <View style={{padding:10}} key={i}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('profile')}>
                   <Image style={{width: 120, height: 150, borderRadius:5}} source={{uri: item.uri}} />
                 </TouchableOpacity>
                 <Text style={{color:'white'}}>{item.name}</Text>
@@ -60,7 +60,7 @@ class Featured extends React.Component {
               return (
               
                 <View style={{padding:10}} key={i}>
-                  <TouchableOpacity>
+                  <TouchableOpacity onPress={() => this.props.navigation.navigate('profile')}>
                     <Image style={{width: 120, height: 150, borderRadius:5}} source={{uri: item.uri}} />
                   </TouchableOpacity>
                   <Text style={{color:'white'}}>{item.name}</Text>
@@ -74,7 +74,7 @@ class Featured extends React.Component {
                 return (
                 
                   <View style={{padding:10}} key={i}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('profile')}>
                       <Image style={{width: 120, height: 150, borderRadius:5}} source={{uri: item.uri}} />
                     </TouchableOpacity>
                     <Text style={{color:'white'}}>{item.name}</Text>
@@ -93,7 +93,7 @@ class Featured extends React.Component {
 
 
           <View style={{flex: 1, flexDirection:'column', alignItems: 'flex-start', backgroundColor:'black'}}>
-            <Text >Continue Watching</Text> 
+            <Text style={{color:'white'}}>Continue Watching</Text> 
             <ScrollView horizontal>
                   {images1}
             </ScrollView>

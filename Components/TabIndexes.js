@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
+import { createBottomTabNavigator, createAppContainer, createStackNavigator } from 'react-navigation';
 import Icons from 'react-native-vector-icons/Ionicons';
 
 // import HomeIconWithBadge from './Icons/HomeIcomWithBage';
@@ -14,20 +14,32 @@ import SettingsScreen from './SettingSreen';
 //   ExploreScreen: ExploreScreen,
 // }
 // ,{
-//   navigationOptions: ({navigation}) => ({
-//     header:'Ignore Offer',
-//     // headerTitle: 'Ignore Offer',
-//     // headerLeft: 'Ignore Offer',
-//     headerBackTitle
-//   })
+  // navigationOptions: ({navigation}) => ({
+  //   header:'Ignore Offer',
+  //   // headerTitle: 'Ignore Offer',
+  //   // headerLeft: 'Ignore Offer',
+  //   headerBackTitle
+  // })
 // })
+
+ const Home = createStackNavigator({
+   HomeScreen:HomeScreen,
+   profile: ProfileScreen,
+ },
+ {
+  initialRouteName: 'HomeScreen',
+  headerMode: 'none',
+  // headerLeft: <HeaderBackButton onPress={() => navigation.goBack(null)} />,
+
+}
+ )
 
 const TabNavigator = createBottomTabNavigator(
     {
-    Settings: SettingsScreen,
-    Explore: ExploreScreen,
-    Home: HomeScreen,
-    Profile: ProfileScreen,
+      Home: Home,
+      Explore: ExploreScreen,
+      Settings: SettingsScreen,
+    // Profile: ProfileScreen,
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({

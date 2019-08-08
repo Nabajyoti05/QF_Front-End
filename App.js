@@ -4,11 +4,13 @@ import { createStackNavigator, createAppContainer, HeaderBackButton } from 'reac
 
 import Login from './Components/Login';
 import TabIndexes from './Components/TabIndexes';
+// import Profile from './Components/ProfileScreen';
 
 const AppContainer = createStackNavigator(
     {
         Login: Login,
         TabIndex: TabIndexes,
+        // Profile: Profile
     },
     {
         initialRouteName: 'TabIndex',
