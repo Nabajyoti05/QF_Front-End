@@ -146,6 +146,7 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-linear-gradient')
+    addUnimodulesDependencies()
     // implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
 }
 
@@ -161,3 +162,5 @@ project.ext.vectoricons = [
 ]
  
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
+apply from: '../../node_modules/react-native-unimodules/gradle.groovy'

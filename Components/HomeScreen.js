@@ -1,5 +1,4 @@
 import React from 'react';
-import { Text, View } from 'react-native';
 import {createMaterialTopTabNavigator} from 'react-navigation';
 
 import Featured from './TabScreens/Featured';
